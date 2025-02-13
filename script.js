@@ -62,9 +62,3 @@ themeToggle.addEventListener("click", toggleTheme);
 
 // Apply initial theme
 applyTheme(currentTheme);
-
-if (currentTheme === "dark") {
-  document.documentElement.style.setProperty("--blendMode", "normal");
-} else {
-  document.documentElement.style.setProperty("--blendMode", "darken");
-}
