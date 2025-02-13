@@ -63,6 +63,7 @@ nav ul li a.active {
 }
 
 header button {
+  display: none;
   padding-inline: 1rem;
   padding-block: 0.5rem;
   background-color: #ffffff;
@@ -113,6 +114,16 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
 .content h2 {
   font-size: 3rem;
 }
@@ -144,6 +155,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-inline: 2rem;
   padding-block: 1rem;
   gap: 2rem;
@@ -152,13 +164,35 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
-.about h2 {
-  margin-top: 80px;
+.line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  gap: 2rem;
+}
+
+.line img {
+  width: 32vw;
+}
+
+.about p {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.about p span {
+  font-style: italic;
+  font-weight: 600;
+  color: #ea00ff;
 }
 
 .skills {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-inline: 2rem;
   padding-block: 1rem;
@@ -168,19 +202,22 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
-.skills h2 {
-  margin-top: 80px;
+.skills p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .cards {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
-  gap: 8rem;
+  gap: 6rem;
 }
 
 .card {
+  width: 13rem;
   display: flex;
   flex-direction: column;
   border-radius: 32px;
@@ -196,6 +233,7 @@ section {
 
 .card:hover {
   box-shadow: 0px 8px 16px #ea00ff68;
+  transform: scale(1.05);
 }
 
 .card h3 {
@@ -206,13 +244,163 @@ section {
 }
 
 .card img {
-  width: 96px;
+  height: 96px;
   background-color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
-@media (max-width: 1024px) {
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  gap: 2rem;
+  background-color: #333;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
 
+.projects p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.projects .projects-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch; /* Mudança aqui */
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  gap: 2rem;
+  background-color: #333;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Mudança aqui */
+  align-items: start;
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  flex: 1; /* Adição importante */
+  max-width: 33.33%; /* Adição importante */
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 32px;
+  box-shadow: 0px 4px 8px #ea00ff33;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+.project:hover {
+  box-shadow: 0px 8px 16px #ea00ff68;
+  transform: scale(1.05);
+}
+
+.project img {
+  height: 96px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.project h3 {
+  color: #333;
+  font-size: 2rem;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.project img {
+  height: 96px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.project p {
+  color: #333;
+  font-size: 1.5rem;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+
+.project .tecnologias {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  background-color: #fff;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.project .tecnologias p {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  background-color: #ea00ff;
+  border-radius: 100px;
+  font-family: "Poppins", sans-serif;
+}
+
+.formacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  gap: 5rem;
+  background-color: #333;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.formacao p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.formacao p span {
+  color: #ea00ff;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.formacao .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.formacao .info img {
+  width: 32vw;
+  background-color: #333;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.formacao .info h3 {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #333;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1024px) {
   header h1 {
     font-size: 1rem;
   }
@@ -228,8 +416,51 @@ section {
   .content span {
     font-size: 2.5rem;
   }
-}
 
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project img {
+    height: 64px;
+  }
+
+  .projects .projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    gap: 2rem;
+    background-color: #333;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    flex: 1;
+    max-width: 100%;
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 32px;
+    box-shadow: 0px 4px 8px #ea00ff33;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease-in-out;
+  }
+}
 
 @media (max-width: 768px) {
   nav {
@@ -246,20 +477,32 @@ section {
   .hero span {
     font-size: 2.5rem;
   }
-}
 
-.hero .content {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+  .hero .content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 
-.content h2 {
-  font-size: 2rem;
-  text-align: center;
-}
+  .content h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
 
-.content p {
-  font-size: 1.5rem;
-  text-align: center;
+  .content p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about p {
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .line img {
+    display: none;
+  }
 }
