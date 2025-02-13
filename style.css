@@ -365,7 +365,7 @@ section {
 
 .formacao p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
 
@@ -385,7 +385,7 @@ section {
 }
 
 .formacao .info img {
-  width: 32vw;
+  width: 24vw;
   background-color: #333;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease-in-out;
@@ -393,7 +393,7 @@ section {
 
 .formacao .info h3 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   background-color: #333;
   font-family: "Poppins", sans-serif;
