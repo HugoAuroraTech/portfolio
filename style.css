@@ -256,7 +256,7 @@ section {
   align-items: center;
   padding-inline: 2rem;
   padding-block: 1rem;
-  gap: 2rem;
+  gap: 1rem;
   background-color: #333;
   color: #fff;
   font-family: "Poppins", sans-serif;
@@ -385,7 +385,7 @@ section {
 }
 
 .formacao .info img {
-  width: 24vw;
+  width: 20vw;
   background-color: #333;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease-in-out;
@@ -393,7 +393,7 @@ section {
 
 .formacao .info h3 {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
   background-color: #333;
   font-family: "Poppins", sans-serif;
@@ -403,6 +403,10 @@ section {
 @media (max-width: 1024px) {
   header h1 {
     font-size: 1rem;
+  }
+
+  h2 {
+    margin-top: 80px;
   }
 
   .hero {
@@ -415,6 +419,10 @@ section {
 
   .content span {
     font-size: 2.5rem;
+  }
+
+  .line {
+    flex-direction: column-reverse;
   }
 
   .cards {
