@@ -1,10 +1,26 @@
+:root {
+  --background: #333333;
+  --text: #ffffff;
+  --border: #d6d6d6;
+  --card-bg: #ffffff;
+  --card-text: #333333;
+  --highlight: #ea00ff;
+  --social-icons: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  background-color: #333;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+body {
+  background-color: transparent;
+  color: transparent;
 }
 
 header {
@@ -13,15 +29,31 @@ header {
   justify-content: space-between;
   padding-inline: 2rem;
   padding-block: 1rem;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--background);
+  color: var(--text);
   font-family: "Poppins", sans-serif;
-  border-bottom: #d6d6d6 solid 1px;
+  border-bottom: var(--border) solid 1px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
+}
+
+/* Add this new style for the theme toggle button */
+#theme-toggle {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--text);
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
 }
 
 header h1 {
@@ -46,8 +78,8 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
   text-decoration: none;
+  background-color: transparent;
   border-bottom: solid transparent;
   transition: all 0.3s ease-in-out;
   font-size: 1rem;
@@ -60,33 +92,6 @@ nav ul li a:hover,
 nav ul li a.active {
   color: #ea00ff;
   border-bottom: solid #ea00ff;
-}
-
-header button {
-  display: none;
-  padding-inline: 1rem;
-  padding-block: 0.5rem;
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  border-radius: 32px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-}
-
-header button:hover {
-  background-color: #d6d6d6;
-}
-
-#menu-icon {
-  font-size: 32px;
-  color: #fff;
-  cursor: pointer;
-  display: none;
 }
 
 main {
@@ -109,8 +114,6 @@ section {
   padding-block: 1rem;
   justify-content: center;
   gap: 8rem;
-  background-color: #333;
-  color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -149,6 +152,8 @@ section {
 .social img {
   width: 32px;
   cursor: pointer;
+  background-color: transparent !important; /* Fundo transparente */
+  filter: brightness(0) invert(var(--social-icons)); /* Filtro dinâmico */
 }
 
 .about {
@@ -159,8 +164,6 @@ section {
   padding-inline: 2rem;
   padding-block: 1rem;
   gap: 2rem;
-  background-color: #333;
-  color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -197,8 +200,6 @@ section {
   padding-inline: 2rem;
   padding-block: 1rem;
   gap: 2rem;
-  background-color: #333;
-  color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -226,7 +227,7 @@ section {
   padding: 2rem;
   gap: 1rem;
   box-shadow: 0px 4px 8px #ea00ff33;
-  background-color: #fff;
+  background-color: var(--card-bg);
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease-in-out;
 }
@@ -237,15 +238,15 @@ section {
 }
 
 .card h3 {
-  color: #333;
+  color: var(--card-text);
+  background-color: transparent;
   font-size: 2rem;
-  background-color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
 .card img {
   height: 96px;
-  background-color: #fff;
+  background-color: transparent;
   font-family: "Poppins", sans-serif;
 }
 
@@ -257,8 +258,6 @@ section {
   padding-inline: 2rem;
   padding-block: 1rem;
   gap: 1rem;
-  background-color: #333;
-  color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -276,8 +275,6 @@ section {
   padding-inline: 2rem;
   padding-block: 1rem;
   gap: 2rem;
-  background-color: #333;
-  color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -291,10 +288,9 @@ section {
   flex: 1; /* Adição importante */
   max-width: 33.33%; /* Adição importante */
   gap: 2rem;
-  background-color: #fff;
+  background-color: var(--card-bg);
   border-radius: 32px;
   box-shadow: 0px 4px 8px #ea00ff33;
-  color: #333;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease-in-out;
 }
@@ -305,27 +301,21 @@ section {
 
 .project img {
   height: 96px;
-  background-color: #fff;
+  background-color: transparent;
   font-family: "Poppins", sans-serif;
 }
 
 .project h3 {
-  color: #333;
+  color: var(--card-text);
   font-size: 2rem;
-  background-color: #fff;
-  font-family: "Poppins", sans-serif;
-}
-
-.project img {
-  height: 96px;
-  background-color: #fff;
+  background-color: transparent;
   font-family: "Poppins", sans-serif;
 }
 
 .project p {
-  color: #333;
+  color: var(--card-text);
   font-size: 1.5rem;
-  background-color: #fff;
+  background-color: var(--card-bg);
   font-family: "Poppins", sans-serif;
   text-align: left;
 }
@@ -336,7 +326,7 @@ section {
   justify-content: start;
   align-items: start;
   gap: 1rem;
-  background-color: #fff;
+  background-color: transparent;
   color: #333;
   font-family: "Poppins", sans-serif;
 }
@@ -358,8 +348,6 @@ section {
   padding-inline: 2rem;
   padding-block: 1rem;
   gap: 5rem;
-  background-color: #333;
-  color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -386,16 +374,16 @@ section {
 
 .formacao .info img {
   width: 20vw;
-  background-color: #333;
+  background-color: transparent;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease-in-out;
 }
 
 .formacao .info h3 {
-  color: #fff;
+  color: var(--text);
   font-size: 1rem;
   text-align: center;
-  background-color: #333;
+  background-color: transparent;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease-in-out;
 }
