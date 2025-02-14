@@ -475,10 +475,11 @@ section {
   .hero .content {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
   }
 
   .content h2 {
+    margin-top: 0px;
     font-size: 2rem;
     text-align: center;
   }
